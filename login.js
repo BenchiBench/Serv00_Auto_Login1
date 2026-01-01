@@ -76,7 +76,7 @@ if (fs.existsSync(LOG_FILE)) {
       await passwordInput.type(password, { delay: 50 });
 
       await Promise.all([
-        submitButton.click(),
+        page.keyboard.press('Enter'),
         waitForLoginResult(page)
       ]);
 
