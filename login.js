@@ -59,6 +59,9 @@ if (fs.existsSync(LOG_FILE)) {
       const url = `https://panel${panelnum}.serv00.com/login/?next=/`;
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
 
+await page.waitForSelector('input[type="text"], input[name="username"]', { visible: true });
+await page.waitForSelector('input[type="password"], input[name="password"]', { visible: true });
+
       const usernameInput = await page.$('input[type="text"], input[name="username"]');
       const passwordInput = await page.$('input[type="password"], input[name="password"]');
       const submitButton = await page.$('button[type="submit"], input[type="submit"]');
