@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 
-// 格式化时间为
+// 格式化时间
 function formatToISO(date) {
   return date.toISOString().split('.')[0].replace('T', ' ');
 }
